@@ -1,0 +1,69 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding-top: 128px;
+	background-image:url(reflejos_fix.jpg);
+}
+th, td {
+  padding: 8px;
+  border: 1px solid #000;
+}
+.enlaces{
+	background-color: #40CFFF;
+	position: fixed;
+	margin-top: -128px;
+	display: inline;
+	width: 100%;
+	transition: 1.0s;
+}
+
+.enlaces__1{
+	font-size: 1.1em;
+	transition: 1.0s;
+	padding: 9px;
+}
+.enlaces__1:hover{
+	background-color: #FFFF00;
+	font-size: 2.250em;
+	transition: 1.0s;
+}
+.texto__enlace{
+		color: black;
+		text-decoration: none;
+}
+.texto__enlace:hover{
+		color: white;
+}
+li {
+	display: inline-block;
+}
+.texto__titulo{
+	margin-left: 600px;
+	font-size: 2em;
+	font-family: serif;
+	background-color: lightblue;
+	border-radius: 5px;
+	margin-right: 700px;
+}
+.tabla{
+	margin-left: 450px;
+	background-color: white; 
+}
+.Bajada{
+	margin-left: 700px;
+}
+.Subida{
+	margin-left: 700px;
+}
+.contactar{
+	transition-duration: 1.0s;
+}
+.contactar:hover{
+	background-color: green;
+	transition-duration: 1.0s;
+}
+.texto__enlace_3:hover{
+	color: white;
+}

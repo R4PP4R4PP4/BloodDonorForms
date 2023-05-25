@@ -1,0 +1,86 @@
+<textarea class="ta1" readonly="Solo lectura"></textarea>
+          <textarea class="ta1">Escribe aqui</textarea>
+ <input type="color" required="">
+          <input type="range"min="1" max="10">
+          <input type="time">
+<input type="button" value="Boton">
+<li class="enlaces__1"><a class="texto__enlace" href="Registros.html">Registros</a></li>
+<li class="enlaces__1"><a class="texto__enlace" href="Iniciar Sesion.html">Iniciar Sesion</a></li>
+
+      <div>
+    <p>
+    <b> Hello <br> MDFK</b>
+    </p>
+   </div>
+
+ <a class="enlaces__g" href="https://Google.com" target="_BLANK">--->Click Aqui<---</a>
+
+     <ul>
+      <li>CEBOLLA</li>
+      <li>CEBOLLA</li>
+      <li>CEBOLLA</li>
+      <li>CEBOLLA</li>
+      <li>CEBOLLA</li>
+     </ul>
+
+<h2>Hola Mundo</h2>
+       <img class="Imagen" src="ESPACIO.jpg" alt="Fondo_Espacial" title="Fondo">
+       <video src="" controls=""></video>
+       <audio src="" controls=""></audio>
+
+
+.enlaces__g{
+	background-color: #FFFF00;
+	display: block;
+}
+.enlaces__g:hover{
+	background-color: #40CFFF;
+	display: block;
+	transition: 2.0s;
+	font-weight: 400px;
+}
+
+.Imagen{
+	height: 420px;
+	width: 420px;
+}
+
+
+if (isset($_POST['btnEnviar'])) {
+}
+try 
+{
+	include_once 'conexionDB.php';
+	$consultaSQL = "SELECT usuario, password FROM login_admin WHERE usuario=:usuario AND password=:password";
+	$user = htmlentities(addcslashes($_POST,['usuario']));
+	$pass = htmlentities(addcslashes($_POST,['password']));
+	$resultado->bindValue(":usuario",$user);
+	$resultado->bindValue(":password",$pass);
+	$resultado->execute();
+	$numeroRegistro = $resultado->rowCount();
+	if ($numeroRegistro!=0) {
+		session_start();
+		$_SESSION['usuario']=$_POST['usuario'];
+		header("location:consultarTurnos.php");
+	}else{
+		echo "<div class='container tezt-center alert alert-danger'>
+		USUARIO NO REGISTRADO </div>";
+	}
+		}catch(Exception $e)
+		{
+			die("ERROR EN INICIAR SESION ".$e->getMessage());
+		}
+}
+
+
+
+
+
+
+
+
+
+<label for="usuario">USUARIO</label>
+				<input type="form-control" name="text" name="usuario">
+				<label for="usuario">PASSWORD</label>
+				<input type="form-control" name="text" name="password">

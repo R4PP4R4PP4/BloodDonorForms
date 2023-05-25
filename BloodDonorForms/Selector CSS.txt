@@ -1,0 +1,210 @@
+CSS SELECTOR
+Universal *
+De tipo h1
+Clases class="yeah" .yeah
+ID #yeah
+por atributo [Saclamahad=""]
+descendiente .yeah 
+pseudoclase h1:hover
+
+medidas relativas
+1em=16px
+vh height
+vw width
+
+INPUT
+TEXTAREA ##RESIZE: NONE;
+LINEAR-GRADIENT(TO BOTTOM, TRANSPARENT,#222);
+
+propiedades de letras
+line-height: el tamaño que ocupara la letra la medida nace del centro y se extiende normal 1
+font-weight: grossor de la letra, algunas tipografias la poseen
+display: block ocupa toda la pagina (los block pueden usar width y height)
+inline solo las letras que usa
+
+propiedades de caja
+background color
+padding left right top bottom
+margin left right top bottom auto
+border radius redondea las puntas
+border style solid dashed double groove inset outset ridge
+border color
+box model 
+content: propiedades del texto
+box shadow (x,y,desenfoque, borde de sombra, color de sombra)
+text shadow (x,y, desenfoque, color de sombra)
+se puede replicar para mayor intensidad(x,y, desenfoque, color de sombra),(x,y, desenfoque, color de sombra)
+transform: rotate(deg)
+Outline: No ocupa espacio, no mueve ,enmarca elementos
+Z-INDEX ##TRABAJA EN EL EJE Z (PROFUNDIDAD), SUPERPOSICION
+DE LAS CAJAS
+
+position: relative sobrepone el elemento por encima de los demas mantiene su espacio, adquiere left top bottom y right, 
+adquiere Z-index(valor mas alto aparece adelante sobreposicion ,default es 0)
+Static: no esta posicionado
+absolute:ajusta el tamaño de la caja al contenido, elimina los espacios de cada caja y ocupa sus lugares
+*opacity:
+fixed: es absolute pero se fija 
+sticky: mezcla fixe y relative
+
+Display: Inline-block: permite realizar modificaciones de altura y posicion 
+
+los inline no se pueden modificar sus dimensiones
+
+overflow: lo que sobra
+inherit
+visible:es el default
+auto:mete todo el contenido en una caja y pone barras cuando sea necesario
+scroll:pone las barras de scroll obligatoriamente
+overflow x: scroll, mete una barra abajo
+overflow y: hidden, ocultar barras de scroll
+
+.clase:hover
+hover:pseudocodigo que al pasar el mouse por encima realiza lo del codigo
+
+FORM:SE COMPORTA COMO UN DIV SIRVE PARA LOS INPUTS
+-----------------------------------------------------------------
+COMENTARIOS:
+
+<!-- contenido -->
+-----------------------------------------------------------------
+FLOAT:
+
+Ubica al elemento del lado izquierdo o derecho de su contenedor
+permitiendo al texto aparecer a su costado
+----------------------------------------------------------------
+PSEUDOELEMENTOS:
+Se aplican a elementos
+-------------------------------BLOCK----------------------------
+.class::first-line ##CAMBIA LA PRIMERA LINEA DEL TEXTO SIN 
+IMPORTAR EL TAMAÑO
+
+::first-letter ##PRIMERA LETRA
+----------------------------------------------------------------
+<input type="text"placeholder="Nombre del paciente">
+::placeholder ##PARA MODIFICAR EL PLACEHOLDER
+----------------------------------------------------------------
+::selection ##LO QUE SELECCIONAMOS
+---------------------------------------------------------------
+::after ##SE ESCRIBE DESPUES 
+::before ##SE ESCRIBE ANTES
+FORMULA >> .a::after{
+content:'';
+}
+---------------------------------------------------------------
+PSEUDOCLASES ##ESCUCHAR UN ELEMENTO
+---------------------------------------------------------------
+::hover ##CUANDO EL MOUSE ESTA ENCIMA
+---------------------------------------------------------------
+::link ##CAMBIA LOS LINKS QUE NO CLICKEAMOS
+-------------------------------------------------------------
+::visited ##CUANDO YA SE VISITO EL LINK
+-------------------------------------------------------------
+::active ##AL MANTENER PULSADO SE CAMBIAN
+LOS ESTILOS
+------------------------------------------------------------
+::focus ##SE UTILIZAN EN INPUTS, CUANDO HACES CLICK Y EL 
+MOUSE ESTA ENCIMA
+-------------------------------------------------------------
+::lang ##PARA LOS LENGUAJES (es,en,ru,it)
+------------------------------------------------------------
+OBJECT-FIT:
+SE APLICA A LAS IMAGENES, PARA DIMENSIONES
+-------------------------------------------------------------
+CONTAIN:
+ES EL VALOR DEFAULT, SE AJUSTA A LAS DIMENSIONES REALES
+SE AJUSTA AL CONTENEDOR, LAS RESOLUCIONES SON LAS QUE POSEA
+MANTIENE RESOLUCIONES, AJUSTANDOSE AL CONTENIDO, NO RELLENA
+ESPACIOS
+-------------------------------------------------------------
+COVER:
+SE AJUSTA AL CONTENEDOR Y RECORTA LO NECESARIO
+--------------------------------------------------------------
+NONE:
+UTILIZA LAS PROPIEDADES ORIGINALES SIN IMPORTAR 
+EL CONTENEDOR
+------------------------------------------------------------
+SCALE-DOWN:
+DEJA LAS RESOLUCIONES MAS PEQUEÑAS
+------------------------------------------------------------
+OBJECT-POSITION: CONFIGURA LAS POSICIONES SI ES QUE SOBRAN
+LAS DIMENSIONES
+TOP
+BOTTOM
+LEFT
+RIGHT
+------------------------------------------------------------
+CURSOR: CAMBIA EL CURSOR AL ESTAR ENCIMA DE UN ELEMENTO
+https://www.w3schools.com/csSref/tryit.asp?filename=trycss_cursor
+-------------------------------------------------------------
+COLORIZACION: 
+COLOR NAME(RED,BLUE,WHITE,YELLOW)
+HEXADECIMAL(#FFFF,#F000)
+RGB(R:29,G:123,B:123)
+RGBA(R,G,B,A=OPACIDAD)
+--------------------------------------------------------------
+RESPONSIVE DESIGN/MOBILE FIRST
+##TRABAJA CON LAS DISTINTAS RESOLUCIONES, ADAPTANDOLAS A 
+DISTINTOS DISPOSITIVOS
+@media only screen and (max-width: px){
+	.nav-lista{
+	}
+}
+----------------------DISPLAY:FLEX--------------------------------
+FLEXBOX ##CAMBIA LAS DIRECCIONES DEL CROSS AXIS{(Y)
+CROSS-START,CROSS-END}Y MAIN AXIS{(X)MAIN-START, MAIN-END}
+FLEX ITEM ##SON LOS ELEMENTOS DENTRO DEL FLEX BOX
+FLEX DIRECTION ##CAMBIA LA ROTACION DEL MAIN AXIS Y POR
+CONSECUENTE SU CROSS AXIS (ROW, COLUMN, ROW-REVERSE,
+COLUMN-REVERSE) 
+FLEX WRAP ##RESPETA LAS DIMENSIONES DE CADA CAJA Y 
+TIRA LAS CAJAS HACIA ABAJO (WRAP, WRAP-REVERSE, NOWRAP)
+MIN-WIDTH ##
+FLEX FLOW ##ES FLEX DIRECCION Y FLEX WRAP JUNTAS
+(COLLUMN WRAP)
+-----------------------------------------------------------
+JUSTIFY-CONTENT ## SE APLICA AL CONTENEDOR
+(CENTER, SPACE-AROUND, SPACE-BETWEEN(EL ESPACIO ENTRE
+CAJAS ES EL MAYOR POSIBLE), SPACE-EVENLY( EL ESPACIO QUE
+EXISTE ENTRE LAS CAJAS ES LA MISMA QUE AL FINAL))
+-----------------------------------------------------------
+ALIGN-ITEMS ##SE UTILIZA SOLO CUANDO HAY UNA LINEA DE
+ITEMS QUE SEAN FLEX-ITEMS Y SON PROPIEDADES DEL CONTENEDOR
+(FLEX-START(SE MANTIENE A SU CONTENIDO)
+,CENTER(CENTRA VERTICAL Y HORIZONTALMENTE)
+,FLEX-END, STRETCH(SE ESTIRA A MENOS QUE ESTE DEFINIDO)
+,BASELINE(CROSS AXIS, SOLO CON WRAP-REVERSE))
+----------------------------------------------------------
+ALIGN-CONTENT ##SE UTILIZA PARA CUANDO HAY MAS DE UNA
+LINEA DE ELEMENTOS (MISMAS PROPIEDADES)
+----------------------------------------------------------
+PROPIEDADES DE FLEX ITEMS
+ALIGN-SELF ##
+
+FLEX GROW ##AGARRA EL ESPACIO SOBRANTE Y LO REPARTE EN LAS 
+CAJAS QUE QUEDAN (INT VA EN PARTES SI SOBRA 300PX ,PONEMOS
+1 SIGNIFICA QUE IRAN 100 PARA EL Y 200 PARA EL QUE LE 
+PUSIMOS 2)
+
+EL MARGIN ES INVERSO(TOP>>BOTTOM, LEFT>>RIGHT)
+FLEX-BASIS ##ES COMO EL WIDTH PERO MAS PARA FLEXES, TIENE
+MAYOR IMPORTANCIA QUE EN WIDTH
+
+FLEX-SHRINK ##DECIDE QUE ESPACIO OCUPARA CADA UNA, CEDERA
+SU ESPACIO(INT)
+
+FLEX ##AGRUPA LOS 3 FLEXES,SHORTHAND (GROW,SHRINK,BASIS)
+ORDER ##ES COMO UN Z-INDEX,EN EL EJE QUE APUNTA EL
+MAIN AXIS, YA SEA DERECHA O IZQUIERDA, COMO CON COLUMN
+ARRIBA O ABAJO
+ 
+
+----------------------------------------------------------
+
+
+
+
+
+
+
+---------------------------------------------------------

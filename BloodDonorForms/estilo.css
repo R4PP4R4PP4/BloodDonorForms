@@ -1,0 +1,99 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding-top: 38px;
+	background-image:url(hosp6.jpg);
+}
+*::selection{
+	background: #000000;
+	color:#96305A; 
+}
+.form__caja{
+	display: inline;
+}
+.caja_texto{
+	background: lightblue;
+	font-size: 1.5em;
+	width: 30%;
+	font-family: serif;
+}
+.caja_titulo{
+	background: rgb(0,212,255);
+}
+.contactar{
+	transition-duration: 1.0s;
+}
+.contactar:hover{
+	background-color: green;
+	transition-duration: 1.0s;
+}
+.texto__enlace_3:hover{
+	color: white;
+}
+.form {
+	font-size: 1.1em;
+	font-family: serif;
+	background: lightblue;
+	padding-left: 50px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 200px;
+	height: 200px;
+}
+.form__texto{
+	display: flex;
+}
+.Titulo{
+	font-size: 3.125em;
+	font-family: "Imprint MT Shadow", cursive;
+	font-weight: 100;
+	text-align: center;
+	margin: auto;
+}
+.enlaces{
+	background-color: #40CFFF;
+	position: fixed;
+	margin-top:-38px;
+	display: inline;
+	width: 100%;
+	transition: 1.0s;
+}
+
+.enlaces__1{
+	font-size: 1.1em;
+	transition: 1.0s;
+	padding: 9px;
+}
+.enlaces__1:hover{
+	background-color: #FFFF00;
+	font-size: 2.250em;
+	transition: 1.0s;
+}
+.texto__enlace{
+		color: black;
+		text-decoration: none;
+}
+.texto__enlace:hover{
+		color: white;
+}
+.Cad{
+	height: 240px;
+	width: 240px;
+}
+li {
+	display: inline-block;
+}
+.politica{
+	background-color: lightblue;
+	margin-left: 75%;
+	font-size: 1.3em;
+}
+.ta1{
+	resize: none;
+}
+.container-flex{
+	display:flex;
+	justify-content: space-between;
+}
